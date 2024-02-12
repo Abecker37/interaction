@@ -1,0 +1,49 @@
+.user {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .user h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .adopted-kittens {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .kitten-card {
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .kitten-card img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .kitten-info {
+    display: none;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .kitten-card:hover .kitten-info {
+    display: block;
+  }
+  

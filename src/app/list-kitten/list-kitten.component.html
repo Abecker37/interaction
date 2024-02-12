@@ -1,0 +1,12 @@
+<div class="kitten-list">
+    <div class="kitten-card" *ngFor="let kitten of kittens">
+        <img [src]="kitten.imgUrl" alt="{{ kitten.name }}" (mouseenter)="showInfo = true"
+            (mouseleave)="showInfo = false">
+        <div *ngIf="showInfo" class="kitten-info">
+            <p><strong>Name:</strong> {{ kitten.name }}</p>
+            <p><strong>Race:</strong> {{ kitten.breed }}</p>
+            <p><strong>Date of birth:</strong> {{ kitten.birthDate | date }}</p>
+        </div>
+        <button (click)="adoptKitten(kitten)" [disabled]="kitten.adopted">Adopter</button>
+    </div>
+</div>

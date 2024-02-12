@@ -1,0 +1,14 @@
+<div class="user">
+    <h2>My cats</h2>
+    <div class="adopted-kittens">
+        <div *ngFor="let kitten of adoptedKittens" class="kitten-card">
+            <img [src]="kitten.imgUrl" alt="{{ kitten.name }}" (mouseenter)="showInfo = true"
+                (mouseleave)="showInfo = false">
+            <div *ngIf="showInfo" class="kitten-info">
+                <p><strong>Name:</strong> {{ kitten.name }}</p>
+                <p><strong>Race:</strong> {{ kitten.breed }}</p>
+                <p><strong>Date of birth</strong> {{ kitten.birthDate | date }}</p>
+            </div>
+        </div>
+    </div>
+</div>
